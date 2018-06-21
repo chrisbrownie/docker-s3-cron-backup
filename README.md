@@ -1,10 +1,7 @@
 # Docker S3 Cron Backup
 
-[:star: Docker Hub](https://hub.docker.com/r/peterrus/s3-cron-backup/)
-[:star: Github](https://github.com/peterrus/docker-s3-cron-backup)
-
 ## What is it?
-A container image that periodically backs up volume at `/data` to Amazon S3 using s3cmd sync
+A container image that periodically backs up volume at `/data` to Amazon S3 using s3cmd sync.
 
 ## Great, but how does it work?
 An Alpine Linux instance runs nothing more than crond with a crontab that contains nothing more than one single entry that triggers the backup script. When this script is run, the volume mounted at `/data` synced to a S3 bucket. The mounted volume, of course, will be left untouched.
